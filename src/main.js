@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 import './registerServiceWorker';
 import vuetify from './plugins/vuetify';
-import VueLoading from 'vuejs-loading-plugin'
+import VueLoading from 'vuejs-loading-plugin';
 
 
 Vue.config.productionTip = false;

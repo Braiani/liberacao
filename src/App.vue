@@ -1,8 +1,10 @@
 <template>
     <v-app>
-        <navigation></navigation>
-        <v-content transition="slide-x-transition">
-            <router-view></router-view>
+        <v-content>
+            <navigation></navigation>
+            <v-container>
+                <router-view></router-view>
+            </v-container>
         </v-content>
     </v-app>
 </template>
@@ -14,9 +16,6 @@
         components: {
             Navigation
         },
-        name: 'App',
-        data: () => ({
-            //
-        }),
+        name: 'App'
     };
 </script>
