@@ -14,7 +14,6 @@
             <h2>Hoje é <span>{{ day }}</span>! Agora são <span>{{ time.toLocaleTimeString() }}</span>!</h2>
         </v-container>
         <v-container fluid>
-            <!--<iframe v-show="showHorario" :src="pdf" frameborder="0" width="100%" height="750px"></iframe>-->
             <horario v-show="showHorario" v-bind:url="pdf" :key="ra"></horario>
         </v-container>
     </v-app>
@@ -58,16 +57,8 @@
                     this.ra = '';
                     this.showHorario = true;
                     this.$loading(false);
-                    /*this.$swal({
-                        title: 'Eba!',
-                        html:
-                            '<iframe :src="this.pdf" frameborder="0" width="100%" height="100%"></iframe>',
-                        showCloseButton: true,
-                        showCancelButton: true,
-                        focusConfirm: true,
-                    });*/
-                    // this.$swal.clickConfirm();
                 }).catch(e => {
+                    this.showHorario = false;
                     console.log('Error: ', e.response.data);
                     this.$loading(false);
                     this.ra = '';

@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <v-content>
-            <navigation></navigation>
+            <navigation title="LiberaIF"></navigation>
             <v-container>
                 <router-view></router-view>
             </v-container>
