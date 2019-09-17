@@ -71,6 +71,10 @@
                 this.showNext = true;
                 this.page--;
             }
+        },
+        mounted() {
+            console.log('Mounted...');
+
         }
     }
 </script>
