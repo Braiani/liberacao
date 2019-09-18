@@ -28,12 +28,13 @@ export default new Vuex.Store({
     actions: {
         getSigaPdf ({commit, getters}) {
             return new Promise ((resolve, reject) => {
-                axios.get('http://localhost:8000/api/teste?ra=' + getters.getRa,{
+                axios.get('http://localhost:8000/api/horario?ra=' + getters.getRa,{
                     headers: {
                         'Content-Type':'application/json'
                     }
                 }).then((response) => {
                     commit('setPdf', response.data);
+                    commit('updateRa', '');
                     resolve();
                 }).catch(() => {
                     reject('Estudante não encontrado. Verifique o RA digitado.');
