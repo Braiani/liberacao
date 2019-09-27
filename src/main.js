@@ -10,8 +10,9 @@ import VueSwal from 'vue-sweetalert2';
 Vue.config.productionTip = false;
 
 Vue.use(VueLoading, {
-  dark: false,
+  dark: true,
   text: 'Carregando', // default 'Loading'
+  background: 'rgba(191, 255, 199,0.5)',
 });
 
 Vue.use(VueSwal);

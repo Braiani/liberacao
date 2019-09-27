@@ -2,12 +2,27 @@
     <v-app>
         <v-container>
             <v-form @submit.prevent="submitForm">
-                <v-text-field
-                        v-model="ra"
-                        label="Digite / Scaneie o RA do estudante"
-                        required
-                        autofocus
-                ></v-text-field>
+                <v-layout row wrap>
+                    <v-flex xs11>
+                        <v-text-field
+                                v-model="ra"
+                                label="Digite / Scaneie o RA do estudante"
+                                required
+                                autofocus
+                        ></v-text-field>
+                    </v-flex>
+                    <v-flex xs1>
+                        <v-btn
+                                class="mx-2"
+                                color="green"
+                                elevation="18"
+                                block
+                                rounded
+                                dark
+                                type="submit"
+                        ><v-icon>mdi-check</v-icon></v-btn>
+                    </v-flex>
+                </v-layout>
             </v-form>
         </v-container>
         <v-container fluid>
